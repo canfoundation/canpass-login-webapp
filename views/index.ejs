@@ -6,7 +6,7 @@
 <body>
 <% if (user) { %>
 <p>You're signed in with a CryptoBadge account, <code><%= user.name %></code>.</p>
-<pre><%= JSON.stringify(JSON.parse(user), null, 2) %></pre>
+<pre><%= JSON.stringify(user, null, 2) %></pre>
 <form id="logout" action="/logout" method="post">
   <a href="#" onclick="document.getElementById('logout').submit();">Sign out</a>
 </form>

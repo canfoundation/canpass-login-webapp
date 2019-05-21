@@ -22,8 +22,8 @@ const clientSecret = 'YOUR_CLIENT_SECRET';
 const callbackURL = 'YOUR_CALLBACK_URL';
 
 passport.use(new OAuth2Strategy({
-  authorizationURL: 'https://cryptobadge.app/oauth2/authorize',
-  tokenURL: 'https://cryptobadge.app/oauth2/token',
+  authorizationURL: 'https://accounts.cryptobadge.app/oauth2/authorize',
+  tokenURL: 'https://accounts.cryptobadge.app/oauth2/token',
   state: true,
   clientID,
   clientSecret,
