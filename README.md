@@ -45,7 +45,7 @@ If you are not signed in to the CryptoBadge, you will be redirected to the login
 http://localhost:3002/auth/cryptobadge/callback?code=858bb641324cef224389ed60b41b00d578c0a93b&state=Tgl7k641Y0tPyPlq2ZHPQHiL
 ```
 
-Note that if you have ever authorized the 3rd party application with the same scope and try again to login with CryptoBadge, you should be redirected to the 3rd party application directly without visiting the authorization page. If you want to visit the authorization page again, you should revoke all the tokens issued to the example. TODO guide how to revoke them 
+Note that if you have ever authorized the 3rd party application with the same scope and try again to login with CryptoBadge, you should be redirected to the 3rd party application directly without visiting the authorization page. If you want to visit the authorization page again, you should revoke all the tokens issued to the example. You can revoke issued tokens at https://cryptobadge.app/setting/applications
 
 By the above redirection, the following callback is called with an access token and refresh token. Behind the scene, the passport exchanges the given code with the token by calling the token endpoint, `https://accounts.cryptobadge.app/oauth2/token`, unless something goes wrong. TODO explain how to call the token endpoint manually
 
