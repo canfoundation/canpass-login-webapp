@@ -35,7 +35,15 @@ passport.use(new OAuth2Strategy({
       'Authorization': `Bearer ${accessToken}`
     },
     json: {
-      query: `query { me { name email } }`
+      query: `query {
+        me {
+          id
+          name
+          email
+          path
+          resourceUrl
+        }
+      }`
     }
   }, (error, response, {data: {me}}) => {
     if (error || response.statusCode !== 200) {
@@ -43,6 +51,7 @@ passport.use(new OAuth2Strategy({
     }
 
     // With the user information, you may want to create and store a user in your database
+    console.log("accessToken", accessToken);
     console.log("The authenticated user", me);
     done(null, me);
   });
