@@ -5,14 +5,14 @@
 </head>
 <body>
 <% if (user) { %>
-<p>You're signed in with a CryptoBadge account, <code><%= user.name %></code>.</p>
+<p>You're signed in with a CANpass account, <code><%= user.name %></code>.</p>
 <pre><%= JSON.stringify(user, null, 2) %></pre>
 <form id="logout" action="/logout" method="post">
   <a href="#" onclick="document.getElementById('logout').submit();">Sign out</a>
 </form>
 <% } else { %>
 <p>You're not signed in yet.</p>
-<p><a href="/auth/cryptobadge">Log In with CryptoBadge</a></p>
+<p><a href="/auth/cryptobadge">Log In with CANpass</a></p>
 <% } %>
 </body>
 </html>

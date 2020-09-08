@@ -16,14 +16,14 @@ app.post('/logout', (req, res) => {
   res.redirect('/');
 });
 
-// CryptoBadge integration
+// CANpass integration
 const clientID = 'YOUR_CLIENT_ID';
 const clientSecret = 'YOUR_CLIENT_SECRET';
 const callbackURL = 'YOUR_CALLBACK_URL';
 
 passport.use(new OAuth2Strategy({
-  authorizationURL: 'https://accounts.cryptobadge.app/oauth2/authorize',
-  tokenURL: 'https://accounts.cryptobadge.app/oauth2/token',
+  authorizationURL: 'https://canpass.me/oauth2/authorize',
+  tokenURL: 'https://canpass.me/oauth2/token',
   state: true,
   clientID,
   clientSecret,
