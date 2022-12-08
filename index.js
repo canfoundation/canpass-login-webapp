@@ -30,7 +30,7 @@ passport.use(new OAuth2Strategy({
   callbackURL
 }, (accessToken, refreshToken, params, profile, done) => {
   request.post({
-    url: 'https://api.cryptobadge.app/graphql',
+    url: 'https://api.canpassme.app/graphql',
     headers: {
       'Authorization': `Bearer ${accessToken}`
     },
