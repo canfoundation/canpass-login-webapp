@@ -30,7 +30,7 @@ passport.use(new OAuth2Strategy({
   callbackURL
 }, (accessToken, refreshToken, params, profile, done) => {
   request.post({
-    url: 'https://api.canpassme.app/graphql',
+    url: 'https://api.canpass.me/graphql',
     headers: {
       'Authorization': `Bearer ${accessToken}`
     },
